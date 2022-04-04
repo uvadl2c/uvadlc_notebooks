@@ -117,3 +117,6 @@ This is the first time we present these tutorials during the Deep Learning cours
    tutorial_notebooks/tutorial15/Vision_Transformer
    tutorial_notebooks/tutorial16/Meta_Learning
    tutorial_notebooks/tutorial17/SimCLR
+   tutorial_notebooks/tutorial18/advancednormflow
+   tutorial_notebooks/tutorial19/hpdlmultigpu
+   tutorial_notebooks/tutorial20/hpdlhyperparam
