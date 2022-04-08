@@ -13,9 +13,9 @@ def main_process(rank: int, world_size: int = 2):
     image = torch.zeros((11, 11), device=device)
 
     if rank == 0:
-        rank_image, rank_mask = disk(image, (3, 3), 2, rank + 1, device)
+        rank_image, rank_mask = disk(image, (3, 3), 2, rank + 1)
     elif rank == 1:
-        rank_image, rank_mask = square(image, (3, 3), 2, rank + 1, device)
+        rank_image, rank_mask = square(image, (3, 3), 2, rank + 1)
 
     plot_matrix(
         rank_image,

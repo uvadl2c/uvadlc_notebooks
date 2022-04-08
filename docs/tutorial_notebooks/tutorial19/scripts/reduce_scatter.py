@@ -14,11 +14,11 @@ def main_process(rank, world_size=2):
     input_tensors = []
 
     if rank == 0:
-        input_tensors.append(disk(image, (4, 5), 2, rank + 1, device)[0])
-        input_tensors.append(square(image, (5, 5), 3, rank + 1, device)[0])
+        input_tensors.append(disk(image, (4, 5), 2, rank + 1)[0])
+        input_tensors.append(square(image, (5, 5), 3, rank + 1)[0])
     elif rank == 1:
-        input_tensors.append(disk(image, (7, 6), 2, rank + 1, device)[0])
-        input_tensors.append(square(image, (0, 2), 4, rank + 1, device)[0])
+        input_tensors.append(disk(image, (7, 6), 2, rank + 1)[0])
+        input_tensors.append(square(image, (0, 2), 4, rank + 1)[0])
 
     output = torch.zeros_like(image, device=device)
 

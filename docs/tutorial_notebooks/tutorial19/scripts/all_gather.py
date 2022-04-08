@@ -12,9 +12,9 @@ def main_process(rank, world_size=2):
     rank_images = []
 
     if rank == 0:
-        rank_images.append(disk(image, (4, 5), 2, rank + 1, device)[0])
+        rank_images.append(disk(image, (4, 5), 2, rank + 1)[0])
     elif rank == 1:
-        rank_images.append(disk(image, (7, 6), 2, rank + 1, device)[0])
+        rank_images.append(disk(image, (7, 6), 2, rank + 1)[0])
 
     output_tensors = []
     for _ in range(world_size):
